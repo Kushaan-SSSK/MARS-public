@@ -1,0 +1,20 @@
+[project]
+name = "mars-offline-analysis"
+version = "0.1.0"
+description = "Offline MARS/AccuSleePy analysis and visualization utilities for sleep-state scoring."
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = { text = "GPL-3.0-or-later" }
+
+[dependency-groups]
+analysis = [
+  "accusleepy>=0.12.2",
+  "bokeh>=3.0",
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "pandas>=2.0",
+  "plotly>=5.0",
+  "pyarrow>=15.0",
+  "pyside6>=6.6",
+  "scipy>=1.11",
+]

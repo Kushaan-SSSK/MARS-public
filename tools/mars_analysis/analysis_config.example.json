@@ -1,0 +1,37 @@
+{
+  "cache_policy": {
+    "hash_large_files_by_stat": true,
+    "skip_existing": true
+  },
+  "dataset_id": "example_dataset",
+  "dataset_root": "%USERPROFILE%\\Documents\\MARS\\Datasets\\ExampleDataset",
+  "default_model_alias": "E2.5W9",
+  "label_roots": [],
+  "label_sources": ["offline_accusleepy", "real_time_mars", "user_labels", "unknown"],
+  "output_root": "%USERPROFILE%\\Documents\\MARS\\AnalysisOutputs",
+  "recordings": [],
+  "state_space_roots": [
+    "%USERPROFILE%\\Documents\\MARS\\StateSpaceTables"
+  ],
+  "visualizer": {
+    "eeg_channel": null,
+    "emg_channel": null,
+    "hour_bin_size": 1.0,
+    "spectrogram_chunk_seconds": 1800.0,
+    "spectrogram_max_hz": 20.0,
+    "spectrogram_min_hz": 0.0,
+    "psd_chunk_seconds": 1800.0,
+    "psd_max_faint_curves_per_state": 2,
+    "psd_show_sem_band": true,
+    "state_colors": {
+      "NREM": "#1f77b4",
+      "REM": "#2ca02c",
+      "TransitionalOrUnclassified": "#9467bd",
+      "Unknown": "#7f7f7f",
+      "Wake": "#d62728"
+    },
+    "trace_bin_seconds": 5.0,
+    "trace_show_channel_names": false,
+    "trace_show_state_strip": false
+  }
+}

@@ -1,0 +1,27 @@
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+*.log
+*.tmp
+*.bak
+
+dist/
+build/
+
+03_model_outputs/
+MARS_Visualizer/
+Output (*/
+
+tools/mars_analysis/**/__pycache__/
+tools/mars_analysis/tests/**/__pycache__/
+tools/mars_analysis/analysis_config.*.json
+!tools/mars_analysis/analysis_config.example.json

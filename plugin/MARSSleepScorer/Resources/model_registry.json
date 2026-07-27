@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "project": "MARS: Mouse Automated Real-Time Scoring",
+  "default_alias": "E2.0W3",
+  "model_aliases": {
+    "E2.5W9": {
+      "display_name": "E2.5W9 baseline realtime AccuSleePy",
+      "epoch_length_sec": 2.5,
+      "input_windows": 9,
+      "feature_window_sec": null,
+      "feature_mode": "default",
+      "first_decision_availability_sec": 22.5,
+      "architecture": "ssann",
+      "model_type": "real-time",
+      "status": "production_baseline",
+      "pytorch_path": "Resources/models/pytorch/E2.5W9.pth",
+      "onnx_path": "Resources/models/onnx/E2.5W9.onnx",
+      "onnx_sha256": "463a50bc324edcd601150a1d3afad8b0893ee95d870033bc4eec7a15939f07ee",
+      "onnx_metadata_path": "Resources/models/onnx/E2.5W9.metadata.json"
+    },
+    "E2.5W1": {
+      "display_name": "E2.5W1 low-latency realtime",
+      "epoch_length_sec": 2.5,
+      "input_windows": 1,
+      "feature_window_sec": 2.5,
+      "feature_mode": "causal",
+      "first_decision_availability_sec": 2.5,
+      "architecture": "low_latency_ssann",
+      "model_type": "real-time",
+      "status": "experimental",
+      "pytorch_path": "Resources/models/pytorch/E2.5W1.pth",
+      "onnx_path": "Resources/models/onnx/E2.5W1.onnx",
+      "onnx_sha256": "877b028dfd6e7b7c911ca4f2038d9140bcffa59506fc0326733a70966a5e7973",
+      "onnx_metadata_path": "Resources/models/onnx/E2.5W1.metadata.json"
+    },
+    "E2.0W1": {
+      "display_name": "E2.0W1 low-latency realtime",
+      "epoch_length_sec": 2.0,
+      "input_windows": 1,
+      "feature_window_sec": 2.0,
+      "feature_mode": "causal",
+      "first_decision_availability_sec": 2.0,
+      "architecture": "low_latency_ssann",
+      "model_type": "real-time",
+      "status": "experimental",
+      "pytorch_path": "Resources/models/pytorch/E2.0W1.pth",
+      "onnx_path": "Resources/models/onnx/E2.0W1.onnx",
+      "onnx_sha256": "66c9268abcdd751ececcf3d44e7a75e570d527c5d45b550b693ba34a1ba6fef2",
+      "onnx_metadata_path": "Resources/models/onnx/E2.0W1.metadata.json"
+    },
+    "E2.0W3": {
+      "display_name": "E2.0W3 low-latency realtime",
+      "epoch_length_sec": 2.0,
+      "input_windows": 3,
+      "feature_window_sec": 2.0,
+      "feature_mode": "causal",
+      "first_decision_availability_sec": 6.0,
+      "architecture": "low_latency_ssann",
+      "model_type": "real-time",
+      "status": "candidate",
+      "pytorch_path": "Resources/models/pytorch/E2.0W3.pth",
+      "onnx_path": "Resources/models/onnx/E2.0W3.onnx",
+      "onnx_sha256": "f772084002c251c6f7859e6ec873377ec0b37ea28fd6a933b5230ebbfccc7d0f",
+      "onnx_metadata_path": "Resources/models/onnx/E2.0W3.metadata.json"
+    }
+  }
+}

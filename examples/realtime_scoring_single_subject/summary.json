@@ -1,0 +1,17 @@
+﻿{
+    "RunName":  "realtime_demo_single_subject",
+    "ScoringApplication":  "MARS",
+    "BridgeMode":  "native-open-ephys-plugin",
+    "ModelAlias":  "E2.0W3",
+    "EpochLengthSeconds":  2,
+    "EpochsPerImage":  3,
+    "FeatureWindowSeconds":  2,
+    "FeatureMode":  "causal",
+    "ProcessingSampleRate":  1000,
+    "DryRun":  true,
+    "OutputEnabled":  false,
+    "AggregateScoredEpochs":  195,
+    "AggregateMissedDeadlineCount":  0,
+    "RecordingStartSeconds":  4,
+    "RecordingEndSeconds":  394
+}

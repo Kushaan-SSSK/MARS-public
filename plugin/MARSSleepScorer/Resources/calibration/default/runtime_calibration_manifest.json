@@ -1,0 +1,49 @@
+{
+  "subject": "MARS_default",
+  "calibrations": [
+    {
+      "alias": "E2.5W9",
+      "profile": "Baseline realtime AccuSleePy",
+      "calibration_file": "MARS_default_E2.5W9_runtime_calibration.csv",
+      "rows": 184,
+      "expected_rows": 184,
+      "epoch_length_sec": 2.5,
+      "epochs_per_img": 9,
+      "feature_window_sec": null,
+      "feature_mode": "default"
+    },
+    {
+      "alias": "E2.5W1",
+      "profile": "M3A_2p5s_1win",
+      "calibration_file": "MARS_default_E2.5W1_runtime_calibration.csv",
+      "rows": 97,
+      "expected_rows": 97,
+      "epoch_length_sec": 2.5,
+      "epochs_per_img": 1,
+      "feature_window_sec": 2.5,
+      "feature_mode": "causal"
+    },
+    {
+      "alias": "E2.0W1",
+      "profile": "M3B_2s_1win",
+      "calibration_file": "MARS_default_E2.0W1_runtime_calibration.csv",
+      "rows": 80,
+      "expected_rows": 80,
+      "epoch_length_sec": 2.0,
+      "epochs_per_img": 1,
+      "feature_window_sec": 2.0,
+      "feature_mode": "causal"
+    },
+    {
+      "alias": "E2.0W3",
+      "profile": "M3C_2s_3win",
+      "calibration_file": "MARS_default_E2.0W3_runtime_calibration.csv",
+      "rows": 80,
+      "expected_rows": 80,
+      "epoch_length_sec": 2.0,
+      "epochs_per_img": 3,
+      "feature_window_sec": 2.0,
+      "feature_mode": "causal"
+    }
+  ]
+}

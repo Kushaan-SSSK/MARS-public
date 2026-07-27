@@ -1,0 +1,22 @@
+{
+  "created_utc": "2026-06-16T18:04:11.650629+00:00",
+  "source_model": "not_packaged",
+  "onnx_model": "Resources\\models\\onnx\\E2.5W9.onnx",
+  "epoch_length_sec": 2.5,
+  "epochs_per_img": 9,
+  "feature_window_sec": null,
+  "model_type": "real-time",
+  "input_shape": [
+    1,
+    1,
+    184,
+    9
+  ],
+  "metadata": {
+    "architecture": "ssann",
+    "epoch_length_sec": 2.5,
+    "epochs_per_img": 9,
+    "model_type": "real-time",
+    "calibrated": true
+  }
+}

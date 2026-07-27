@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "source": "AccuSleePy preprocessing parity resources",
+  "sample_rate_hz": 1000,
+  "time_bandwidth": 2,
+  "num_tapers": 3,
+  "dpss_files": {
+    "2000": {
+      "file": "dpss_1000Hz_2000samples_TW2_K3.csv",
+      "window_samples": 2000,
+      "eigenvalues": [
+        0.9999427543245687,
+        0.997561732770736,
+        0.9593905332045867
+      ]
+    },
+    "2500": {
+      "file": "dpss_1000Hz_2500samples_TW2_K3.csv",
+      "window_samples": 2500,
+      "eigenvalues": [
+        0.9999427539752032,
+        0.9975617239199374,
+        0.9593904656121652
+      ]
+    },
+    "5000": {
+      "file": "dpss_1000Hz_5000samples_TW2_K3.csv",
+      "window_samples": 5000,
+      "eigenvalues": [
+        0.9999427535093803,
+        0.9975617121188488,
+        0.9593903754889744
+      ]
+    }
+  },
+  "emg_filter": {
+    "type": "butterworth_bandpass_sos",
+    "order": 8,
+    "low_hz": 20.0,
+    "high_hz": 50.0,
+    "file": "butter_sos_1000Hz_order8_20_50.csv"
+  }
+}

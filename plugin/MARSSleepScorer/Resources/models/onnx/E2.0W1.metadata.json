@@ -1,0 +1,31 @@
+{
+  "created_utc": "2026-06-16T18:18:07.021601+00:00",
+  "source_model": "not_packaged",
+  "onnx_model": "Resources\\models\\onnx\\E2.0W1.onnx",
+  "epoch_length_sec": 2.0,
+  "epochs_per_img": 1,
+  "feature_window_sec": 2.0,
+  "feature_mode": "causal",
+  "model_type": "real-time",
+  "input_shape": [
+    1,
+    1,
+    80,
+    1
+  ],
+  "metadata": {
+    "architecture": "low_latency_ssann",
+    "epoch_length_sec": 2.0,
+    "epochs_per_img": 1,
+    "feature_window_sec": 2.0,
+    "feature_mode": "causal",
+    "label_grid_sec": 2.0,
+    "model_profile": "M3B_2s_1win",
+    "calibrated": true,
+    "train_manifest": "not_packaged",
+    "train_manifest_sha256": "4e544d07420a3a0a65d721928f1aeb2d0a31687460e3981586f8e9f40e220aeb",
+    "calibration_manifest": "not_packaged",
+    "calibration_manifest_sha256": "3201aae0ede8f44bed0d426cc5dd4d689b8a58327ff83e903b2b5e76ad089d24",
+    "model_type": "real-time"
+  }
+}
