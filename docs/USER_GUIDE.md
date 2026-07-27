@@ -1,5 +1,22 @@
 # User Guide
 
+## Offline EDF Reviewer
+
+Dataset Status is a dataset-level health summary. `Configured recordings`
+shows how many entries are in the analysis config, `Scored recordings` shows
+how many completed successfully, and Classification Status groups recordings
+by result such as `ok`. It does not repeat every recording as a separate row.
+
+The Recordings list in the left sidebar contains all configured recordings.
+Select one to view its Recording Overview, Classification, Trace QC,
+Spectrogram, Power Spectra, and Epoch Inspector results.
+
+Before using Group Analysis, populate `animal_id`, `condition`, `dose`, and
+`session` for every recording in the analysis config. The EDF tree config
+builder detects signal channels but does not infer this experimental metadata
+from paths or filenames. Blank metadata causes recordings to be pooled into an
+unnamed ` /  / ` group; it does not indicate a scoring failure.
+
 ## Single-Animal Scoring
 
 Scoring-only chain:

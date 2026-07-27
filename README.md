@@ -6,6 +6,30 @@ Mouse Automated Real-Time Scoring for Open Ephys.
 
 MARS provides native Open Ephys processors for real-time EEG/EMG state scoring, safe TTL routing, portable run folders, and an offline EDF analysis utility.
 
+## Windows prerequisites
+
+The offline workflow requires Windows PowerShell, an internet connection for
+the first environment setup, and your own EDF recordings. Raw EDF data is not
+included in this repository.
+
+Install `uv` with Windows Package Manager:
+
+```powershell
+winget install --id=astral-sh.uv -e
+```
+
+Open a new PowerShell window, verify the installation, and change to the cloned
+repository root:
+
+```powershell
+uv --version
+cd "C:\path\to\MARS-public"
+```
+
+MARS supports Python 3.11 through 3.13. `uv` automatically downloads a
+compatible Python version when one is not already available, so a separate
+Python installation is normally unnecessary.
+
 ## Choose a workflow
 
 ### Real-time scoring in Open Ephys
@@ -25,19 +49,35 @@ MARS provides native Open Ephys processors for real-time EEG/EMG state scoring, 
    uv run python -m tools.mars_analysis build-edf-tree-config --edf-root "C:\path\to\edfs" --output-root "C:\path\to\mars_outputs" --output analysis_config.json
    ```
 
-3. Open the config and confirm the EEG and EMG columns, then score and generate review artifacts:
+3. Open the config and confirm every recording's EEG and EMG columns. If you
+   plan to use Group Analysis, also fill in `animal_id`, `condition`, `dose`,
+   and `session` for each recording. The config builder does not infer those
+   experimental fields from folder or file names.
+
+4. Score and generate review artifacts:
 
    ```powershell
    uv run python -m tools.mars_analysis analyze analysis_config.json
    ```
 
-4. Open the EDF reviewer:
+   A first analysis of long recordings can take several minutes and may remain
+   quiet while processing. The command prints the generated artifact paths when
+   it finishes. Later runs reuse existing predictions when the configuration
+   and source files have not changed.
+
+5. Open the EDF reviewer:
 
    ```powershell
    uv run python -m tools.mars_analysis gui analysis_config.json
    ```
 
-The reviewer provides model results, EEG/EMG trace QC, spectrograms, power spectra, epoch inspection, and recording-level group summaries. See [docs/WORKFLOW.md](docs/WORKFLOW.md) for the complete safety, real-time, offline, and validation workflow.
+Dataset Status summarizes completion and status counts for the whole dataset.
+Use the Recordings list and the Recording Overview or Classification tabs to
+inspect individual recordings. Group Analysis is meaningful only when the
+grouping metadata above is populated. The reviewer also provides EEG/EMG trace
+QC, spectrograms, power spectra, and epoch inspection. See
+[docs/WORKFLOW.md](docs/WORKFLOW.md) for the complete safety, real-time,
+offline, and validation workflow.
 
 ## Benchmark snapshot
 

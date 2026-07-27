@@ -11,6 +11,20 @@ docs\WORKFLOW.md
 
 ## Quick Launch
 
+Complete the first-run setup from the repository root:
+
+```powershell
+uv --version
+uv sync --group analysis
+```
+
+If `uv` is not installed, install it in PowerShell with
+`winget install --id=astral-sh.uv -e`, then open a new PowerShell window. The
+project supports Python 3.11 through 3.13, and `uv` normally downloads a
+compatible Python version automatically.
+
+After setup, launch the reviewer:
+
 From the repository root:
 
 ```text
@@ -63,6 +77,12 @@ Analysis outputs include:
 
 - The public default model is `E2.5W9`, the trained offline AccuSleePy/MARS
   profile with 2.5 second epochs and 9 input windows.
+- `build-edf-tree-config` detects EDF channel labels but does not infer
+  `animal_id`, `condition`, `dose`, or `session`. Populate those fields in the
+  generated config before using Group Analysis. Otherwise recordings are
+  pooled into an unnamed ` /  / ` group.
+- Dataset Status reports dataset-level completion and status counts. Use the
+  Recordings list in the GUI sidebar to select and inspect each recording.
 - EDF reading and plotting are chunked so full raw recordings are not loaded
   into memory.
 - The example config is portable and intentionally contains no recordings.
